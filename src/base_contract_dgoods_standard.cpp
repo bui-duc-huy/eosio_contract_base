@@ -1,7 +1,8 @@
 #include "base_contract_dgoods_standard.hpp"
 
-ACTION main_contract::hello (name user) {
+void main_contract::hello (name user) {
     require_auth(get_self());
+    print(user);
 }
 
 extern "C" {
